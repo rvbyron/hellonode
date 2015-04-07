@@ -1,2 +1,11 @@
 npm install -g initialize
 npm init
+    name: (hellonode)
+    version: (1.0.0)
+    description: What Every JavaScript Programmer Should Node
+    entry point: (index.js)
+    test command:
+    git repository: (https://github.com/rvbyron/hellonode.git)
+    keywords: tutorial nodejs
+    author: Bob Byron
+    license: (ISC)
