@@ -1,29 +1,24 @@
-create readfiles.js
-    // File System Package
-    var fs = require("fs");
-    // Variable to store filename
-    var filename = "steps.txt";
+npm install express --save
+create helloweb.js
+    // Use Express to create our web server
+    var express = require("express");
 
-    // Read File Function
-    function readfile( filename, processLine ) {
+    // Get an instance of the express object
+    var app = express();
 
-        // Read the file via the FileSystem(fs) instance.
-        fs.readFile( filename, function(err, data) {
-            bufferString = data.toString();
-            bufferLines = bufferString.split("\n");
-            for(var i=0;i<bufferLines.length;i++) {
-                var line = bufferLines[i];
-                processLine(i, line);
-            }
-        });
-    }
+    // Create a callback action for the root get request
+    app.get("/", function( request, response ) {
+        response.send("Hello World!")
+    });
 
-    // Create a callback function to be called on every line.
-    function printLine(index, line) {
-        function padnum( num, width ) {
-            return ("0000000000"+(num+1)).substr(-1*width);
-        }
-        console.log(padnum(index,4)+": "+line);
-    }
+    // Listen on port 3000
+    var server = app.listen( 3000, function() {
 
-    readfile( filename, printLine );
+        // Get the host IP Address currently being used.
+        var host = server.address().address;
+
+        // Get the port currently being used.
+        var port = server.address().port;
+
+        console.log("Listening using protocol(http) at host(%s) port(%s)",host,port);
+    })
