@@ -1,0 +1,23 @@
+{
+  "name": "hellonode",
+  "version": "1.0.0",
+  "description": "What Every JavaScript Programmer Should Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvbyron/hellonode.git"
+  },
+  "keywords": [
+    "tutorial",
+    "nodejs"
+  ],
+  "author": "Bob Byron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvbyron/hellonode/issues"
+  },
+  "homepage": "https://github.com/rvbyron/hellonode"
+}
